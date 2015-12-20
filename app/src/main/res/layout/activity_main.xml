@@ -2,79 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCCCCCC"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".MainActivity" >
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:orientation="horizontal" >
-        <ImageButton
-            android:id="@+id/draw_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="Select Brush"
-            android:onClick="floatClick"
-            android:src="@drawable/brush" />
-        <!--<ImageButton-->
-            <!--android:id="@+id/set_btn"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:contentDescription="Set Brush"-->
-            <!--android:onClick="setClick"-->
-            <!--android:src="@drawable/set" />-->
-        <ImageButton
-            android:id="@+id/in_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="Select Inward Magnet Brush"
-            android:onClick="inClick"
-            android:src="@drawable/in" />
-        <ImageButton
-            android:id="@+id/out_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="Select Outward Magnet Brush"
-            android:onClick="outClick"
-            android:src="@drawable/out" />
-        <ImageButton
-            android:id="@+id/size_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="Select Brush"
-            android:onClick="sizeClick"
-            android:src="@drawable/size" />
-        <ImageButton
-            android:id="@+id/new_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="New Picture"
-            android:onClick="newClick"
-            android:src="@drawable/new_pic" />
-        <ImageButton
-            android:id="@+id/save_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="Save Picture"
-            android:onClick="saveClick"
-            android:src="@drawable/save" />
-    </LinearLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@android:color/white" />
     <com.example.brendan.learningandroid2.DrawingView
         android:id="@+id/drawing"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="3dp"
-        android:layout_weight="1"
-        android:background="#FFFFFFFF" />
+        android:layout_weight="1" />
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/color_palette_background">
 
         <LinearLayout
             android:id="@+id/paint_colors"
@@ -145,7 +93,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:background="@color/color_palette_background">
 
             <ImageButton
                 android:layout_width="@dimen/large_brush"

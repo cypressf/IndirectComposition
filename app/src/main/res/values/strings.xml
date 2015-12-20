@@ -8,4 +8,8 @@
     <string name="erase">Erase</string>
     <string name="save">Save</string>
     <string name="paint">Paint</string>
+    <string name="inward_magnet_brush">Inward Magnet Brush</string>
+    <string name="outward_magnet_brush">Outward Magnet Brush</string>
+    <string name="new_picture">New Picture</string>
+    <string name="size">Size</string>
 </resources>

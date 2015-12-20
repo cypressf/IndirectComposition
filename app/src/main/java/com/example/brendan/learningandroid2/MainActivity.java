@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("");
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         drawView = (DrawingView)findViewById(R.id.drawing);
 
         LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_colors);
@@ -54,14 +59,27 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_draw:
+                floatClick();
+                return true;
+            case R.id.action_in:
+                inClick();
+                return true;
+            case R.id.action_new:
+                newClick();
+                return true;
+            case R.id.action_out:
+                outClick();
+                return true;
+            case R.id.action_save:
+                saveClick();
+                return true;
+            case R.id.action_size:
+                sizeClick();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -88,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void setClick(View view){
+    public void setClick(){
         final SeekArc arc = new SeekArc(this);
 
 
@@ -112,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void sizeClick(View view){
+    public void sizeClick(){
         final SeekBar bar = new SeekBar(this);
 
 
@@ -183,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void saveClick(View view){
+    public void saveClick(){
         Log.d("", "Save Clicked");
         AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
         saveDialog.setTitle("Save drawing");
@@ -200,11 +218,11 @@ public class MainActivity extends AppCompatActivity {
         });
         saveDialog.show();
     }
-    public void floatClick(View view){
+    public void floatClick(){
         drawView.setBrush(new FloatBrush());
         Log.d("", "Float Clicked");
     }
-    public void newClick(View view){
+    public void newClick(){
         AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
         newDialog.setTitle("New drawing");
         newDialog.setMessage("Start new drawing (you will lose the current drawing)?");
@@ -222,11 +240,11 @@ public class MainActivity extends AppCompatActivity {
         newDialog.show();
 //        drawView.startNew();
     }
-    public void inClick(View view){
+    public void inClick(){
         drawView.setBrush(new InBrush());
         Log.d("","In Clicked");
     }
-    public void outClick(View view){
+    public void outClick(){
         drawView.setBrush(new OutBrush());
         Log.d("","Out Clicked");
     }

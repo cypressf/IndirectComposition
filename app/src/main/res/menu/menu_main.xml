@@ -1,6 +1,41 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_draw"
+        android:title="@string/brush"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_brush_24dp" />
+    <!--<item-->
+    <!--android:id="@+id/action_set"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:title="Set Brush"-->
+    <!--app:showAsAction="always
+    android:icon="@drawable/set" />-->
+    <item
+        android:id="@+id/action_in"
+        android:title="@string/inward_magnet_brush"
+        app:showAsAction="always"
+        android:icon="@drawable/in" />
+    <item
+        android:id="@+id/action_out"
+        android:title="@string/outward_magnet_brush"
+        app:showAsAction="always"
+        android:icon="@drawable/out" />
+    <item
+        android:id="@+id/action_size"
+        android:title="@string/size"
+        app:showAsAction="always"
+        android:icon="@drawable/size" />
+    <item
+        android:id="@+id/action_new"
+        android:title="@string/new_picture"
+        app:showAsAction="always"
+        android:icon="@drawable/new_pic" />
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/save"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_save_24dp" />
 </menu>
