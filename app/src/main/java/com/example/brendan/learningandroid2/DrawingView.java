@@ -3,23 +3,18 @@ package com.example.brendan.learningandroid2;
 /**
  * Created by brendan on 8/23/2015.
  */
+
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Environment;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.view.MotionEvent;
 import android.graphics.PorterDuff;
-import android.view.Display;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 
 public class DrawingView extends View {
 

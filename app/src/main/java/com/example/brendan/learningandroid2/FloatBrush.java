@@ -2,7 +2,6 @@ package com.example.brendan.learningandroid2;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.util.Log;
 
 /**
  * Created by brendan on 9/4/2015.

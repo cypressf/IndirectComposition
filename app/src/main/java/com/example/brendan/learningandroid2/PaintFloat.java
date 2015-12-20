@@ -3,9 +3,6 @@ package com.example.brendan.learningandroid2;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.util.Log;
-
-import java.sql.Time;
 
 /**
  * Created by brendan on 8/26/2015.
