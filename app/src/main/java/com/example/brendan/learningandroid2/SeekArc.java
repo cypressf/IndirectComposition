@@ -29,6 +29,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -161,7 +162,7 @@ public class SeekArc extends View {
 
         // Defaults, may need to link this into theme settings
 //        int arcColor = res.getColor(R.color.progress_gray);
-        int progressColor = res.getColor(android.R.color.holo_blue_light);
+        int progressColor = ContextCompat.getColor(context, android.R.color.holo_blue_light);
         int thumbHalfheight = 0;
         int thumbHalfWidth = 0;
 //        mThumb = res.getDrawable(R.drawable.seek_arc_control_selector);
